@@ -15,7 +15,9 @@ const Form = () => {
     setType(e.target.value);
   };
 
- 
+  useEffect(() => {
+    getText();
+  },[]);
 
   useEffect(() => {
     getText();
