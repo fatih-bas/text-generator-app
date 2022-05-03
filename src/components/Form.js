@@ -16,19 +16,10 @@ const Form = () => {
   };
 
   useEffect(() => {
-    getText();
-  },[]);
-
-  useEffect(() => {
-    getText();
-  }, [paras, type]);
-
-  const getText = async () => {
-    await axios.get(textURL).then((res) => {
+    axios.get(textURL).then((res) => {
       setText(res.data);
     });
-  };
-
+  }, [paras, type]);
   return (
     <>
       <form className="flex flex-row mt-5">
