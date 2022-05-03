@@ -6,8 +6,6 @@ const Form = () => {
   const [paras, setParas] = useState(4);
   const [type, setType] = useState("text");
 
-  const textURL = `https://baconipsum.com/api/?type=meat-and-filler&paras=${paras}&format=${type}`;
-
   const handleParas = (e) => {
     setParas(e.target.value);
   };
@@ -16,8 +14,9 @@ const Form = () => {
   };
 
   useEffect(() => {
-    axios.get(textURL).then((res) => {
-      setText(res.data);
+    axios
+      .get(`https://baconipsum.com/api/?type=meat-and-filler&paras=${paras}&format=${type}`)
+      .then((res) => {setText(res.data);
     });
   }, [paras, type]);
   return (
