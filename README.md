@@ -13,6 +13,7 @@
 
 ### Live
 
+https://text-generator-app-111.netlify.app/
 
 ### Setup
 1. Clone the repository and install the dependencies
